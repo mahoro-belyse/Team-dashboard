@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
-import {
-  LayoutDashboard,
-  FolderKanban,
-  MessageSquare,
-  Menu,
-  X,
-  LogOut,
-} from "lucide-react";
+import { LayoutDashboard, Menu, X, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar: React.FC = () => {
@@ -24,12 +17,7 @@ const Navbar: React.FC = () => {
 
   const loggedInLinks = [
     { label: "Home", path: "/", icon: null },
-    { label: "Teams", path: "/team", icon: null },
     { label: "Dashboard", path: "/dashboard", icon: LayoutDashboard },
-    { label: "Projects", path: "/projects", icon: FolderKanban },
-    { label: "Communication", path: "/communication", icon: MessageSquare },
-    { label: "Announcements", path: "/notifications", icon: null },
-    { label: "Settings", path: "/settings", icon: null },
   ];
 
   const handleLogout = () => {

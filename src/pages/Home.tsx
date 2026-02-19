@@ -3,7 +3,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { Users, BarChart3, Shield, Zap, ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/layout/Footer";
-
+import Navbar from "@/components/layout/Navbar";
 const features = [
   {
     icon: Users,
@@ -57,6 +57,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen">
+      <Navbar />
       {/* Hero */}
       <section className="relative overflow-hidden text-primary-foreground bg-[url('/img/2.jpg')] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 opacity-30 bg-black/20" />
