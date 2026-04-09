@@ -19,7 +19,7 @@ This web app includes:
 Experience the **professional, modern, and attractive Team Dashboard Web App** live:
 
 🔗 **Live Application:**  
-https://team-colla-b.netlify.app/
+https://team-colla-bo.netlify.app/
 
 ---
 
@@ -49,7 +49,7 @@ https://team-colla-b.netlify.app/
 Clone the repository:
 
 ```bash
-git clone https://github.com/NexventuresLtd/Task-4-dashboard-web-app/
+git clone https://github.com/mahoro-belyse/Team-dashboard.git
 cd team-dashboard
 ```
 
