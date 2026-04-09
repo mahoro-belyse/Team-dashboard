@@ -1,46 +1,63 @@
-/* ======================================================
-   TAILWIND + GOOGLE FONT
-   ====================================================== */
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 /* ======================================================
    THEME TOKENS (Replaces tailwind.config.ts theme.extend)
    ====================================================== */
-@theme {
-  /* Core Colors */
-  --color-border: hsl(214 20% 90%);
-  --color-input: hsl(214 20% 90%);
-  --color-ring: hsl(38 92% 50%);
-  --color-background: hsl(210 40% 98%);
-  --color-foreground: hsl(222 47% 11%);
 
-  --color-primary: hsl(147 62% 20%);
+@theme {
+  /* Core Tokens */
+  --color-border: hsl(214 32% 91%);
+  --color-input: hsl(214 32% 91%);
+  --color-ring: hsl(217 91% 50%);
+  --color-background: hsl(210 20% 98%);
+  --color-foreground: hsl(215 25% 15%);
+
+  --color-primary: hsl(217 91% 50%);
   --color-primary-foreground: hsl(0 0% 100%);
-  --color-secondary: hsl(142 72% 36%);
-  --color-secondary-foreground: hsl(0 0% 100%);
+
+  --color-secondary: hsl(214 32% 91%);
+  --color-secondary-foreground: hsl(215 25% 15%);
+
   --color-destructive: hsl(0 72% 51%);
   --color-destructive-foreground: hsl(0 0% 100%);
-  --color-success: hsl(142 72% 29%);
-  --color-success-foreground: hsl(0 0% 100%);
-  --color-muted: hsl(210 20% 95%);
-  --color-muted-foreground: hsl(220 9% 46%);
-  --color-accent: hsl(38 92% 50%);
-  --color-accent-foreground: hsl(222 47% 11%);
+
+  --color-muted: hsl(210 20% 96%);
+  --color-muted-foreground: hsl(215 14% 46%);
+
+  --color-accent: hsl(210 20% 94%);
+  --color-accent-foreground: hsl(215 25% 15%);
+
   --color-popover: hsl(0 0% 100%);
-  --color-popover-foreground: hsl(222 47% 11%);
+  --color-popover-foreground: hsl(215 25% 15%);
+
   --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(222 47% 11%);
+  --color-card-foreground: hsl(215 25% 15%);
+
+  --color-success: hsl(142 71% 45%);
+  --color-success-foreground: hsl(0 0% 100%);
+
+  --color-warning: hsl(38 92% 50%);
+  --color-warning-foreground: hsl(0 0% 100%);
+
+  --color-info: hsl(199 89% 48%);
+  --color-info-foreground: hsl(0 0% 100%);
 
   /* Sidebar */
-  --color-sidebar: hsl(0 0% 98%);
-  --color-sidebar-foreground: hsl(240 5.3% 26.1%);
-  --color-sidebar-primary: hsl(240 5.9% 10%);
-  --color-sidebar-primary-foreground: hsl(0 0% 98%);
-  --color-sidebar-accent: hsl(240 4.8% 95.9%);
-  --color-sidebar-accent-foreground: hsl(240 5.9% 10%);
-  --color-sidebar-border: hsl(220 13% 91%);
-  --color-sidebar-ring: hsl(217.2 91.2% 59.8%);
+  --color-sidebar: hsl(215 25% 15%);
+  --color-sidebar-foreground: hsl(210 20% 90%);
+  --color-sidebar-primary: hsl(217 91% 60%);
+  --color-sidebar-primary-foreground: hsl(0 0% 100%);
+  --color-sidebar-accent: hsl(215 25% 22%);
+  --color-sidebar-accent-foreground: hsl(210 20% 90%);
+  --color-sidebar-border: hsl(215 20% 25%);
+  --color-sidebar-ring: hsl(217 91% 60%);
+
+  /* ✅ Charts (FIXED — removed hsl wrapper) */
+  --color-chart-1: 217 91% 50%;
+  --color-chart-2: 142 71% 45%;
+  --color-chart-3: 38 92% 50%;
+  --color-chart-4: 199 89% 48%;
+  --color-chart-5: 262 83% 58%;
 
   /* Radius */
   --radius-lg: 0.5rem;
@@ -55,39 +72,35 @@
 /* ======================================================
    DARK MODE
    ====================================================== */
+
 .dark {
-  --color-border: hsl(217 33% 17%);
-  --color-input: hsl(217 33% 17%);
-  --color-ring: hsl(38 92% 50%);
-  --color-background: hsl(222 47% 6%);
-  --color-foreground: hsl(210 40% 96%);
+  --color-border: hsl(215 20% 22%);
+  --color-input: hsl(215 20% 22%);
+  --color-ring: hsl(217 91% 60%);
+  --color-background: hsl(215 28% 9%);
+  --color-foreground: hsl(210 20% 95%);
 
-  --color-primary: hsl(142 72% 36%);
-  --color-primary-foreground: hsl(0 0% 100%);
-  --color-secondary: hsl(147 62% 20%);
-  --color-secondary-foreground: hsl(0 0% 100%);
-  --color-muted: hsl(217 33% 17%);
-  --color-muted-foreground: hsl(215 20% 65%);
-  --color-accent: hsl(38 92% 50%);
-  --color-accent-foreground: hsl(0 0% 100%);
-  --color-destructive: hsl(0 62% 31%);
-  --color-destructive-foreground: hsl(210 40% 98%);
-  --color-success: hsl(142 72% 36%);
-  --color-success-foreground: hsl(0 0% 100%);
+  --color-primary: hsl(217 91% 60%);
+  --color-secondary: hsl(215 20% 20%);
+  --color-muted: hsl(215 20% 17%);
+  --color-muted-foreground: hsl(215 14% 60%);
+  --color-accent: hsl(215 20% 20%);
+  --color-card: hsl(215 25% 12%);
+  --color-popover: hsl(215 25% 12%);
+  --color-destructive: hsl(0 62% 40%);
+  --color-success: hsl(142 60% 40%);
+  --color-warning: hsl(38 80% 45%);
+  --color-info: hsl(199 70% 45%);
 
-  --color-sidebar: hsl(240 5.9% 10%);
-  --color-sidebar-foreground: hsl(240 4.8% 95.9%);
-  --color-sidebar-primary: hsl(224.3 76.3% 48%);
-  --color-sidebar-primary-foreground: hsl(0 0% 100%);
-  --color-sidebar-accent: hsl(240 3.7% 15.9%);
-  --color-sidebar-accent-foreground: hsl(240 4.8% 95.9%);
-  --color-sidebar-border: hsl(240 3.7% 15.9%);
-  --color-sidebar-ring: hsl(217.2 91.2% 59.8%);
+  --color-sidebar: hsl(215 28% 7%);
+  --color-sidebar-accent: hsl(215 25% 14%);
+  --color-sidebar-border: hsl(215 20% 15%);
 }
 
 /* ======================================================
    BASE LAYER
    ====================================================== */
+
 @layer base {
   * {
     @apply border-border;
@@ -119,6 +132,7 @@
 /* ======================================================
    ACCORDION ANIMATIONS
    ====================================================== */
+
 @keyframes accordion-down {
   from {
     height: 0;
@@ -141,6 +155,7 @@
   .animate-accordion-down {
     animation: accordion-down 0.2s ease-out;
   }
+
   .animate-accordion-up {
     animation: accordion-up 0.2s ease-out;
   }
